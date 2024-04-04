@@ -1,10 +1,10 @@
-import Nav from './Nav';
+import NavBar from './NavBar';
 
 const Header = () => {
   return (
-    <header>
-      <div className='container'>
-        <Nav />
+    <header className='navbar mb-12 shadow-lg bg-neutral text-neutral-content'>
+      <div className='container mx-auto'>
+        <NavBar />
       </div>
     </header>
   );

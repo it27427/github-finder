@@ -1,13 +1,22 @@
-import Logo from '../assets/images/logo.svg';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { FaGithub } from 'react-icons/fa';
 
-const BrandLogo = () => {
+const BrandLogo = ({ title }) => {
   return (
     <Link to='/' className='flex items-center gap-2'>
-      <img src={Logo} alt='Brand-Logo' width={40} height={40} />
-      <span>Github Finder</span>
+      <FaGithub className='text-3xl' />
+      <span className='text-lg font-bold align-middle'>{title}</span>
     </Link>
   );
+};
+
+BrandLogo.defaultProps = {
+  title: 'Github Finder',
+};
+
+BrandLogo.propTypes = {
+  title: PropTypes.string,
 };
 
 export default BrandLogo;
