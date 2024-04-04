@@ -5,14 +5,14 @@ import Logo from './BrandLogo';
 const NavBar = () => {
   const linkClass = ({ isActive }) =>
     isActive
-      ? 'btn btn-ghost btn-sm rounded-btn btn-active'
-      : 'btn btn-ghost btn-sm rounded-btn';
+      ? 'btn btn-ghost btn-sm rounded-btn btn-active text-white'
+      : 'btn btn-ghost btn-sm rounded-btn text-white';
 
   return (
     <nav className='flex items-center px-2 mx-2 w-full'>
       <Logo />
 
-      <div className='flex-1 px-2 mx-2'>
+      <div className='flex-1'>
         <ul className='flex justify-end gap-2'>
           <li>
             <NavLink to='/' className={linkClass}>
