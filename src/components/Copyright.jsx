@@ -2,9 +2,9 @@ import CurrentYear from './CurrentYear';
 
 const Copyright = () => {
   return (
-    <div>
-      &copy; <CurrentYear />
-    </div>
+    <p className='text-white'>
+      Copyright &copy; <CurrentYear /> All rights reserved.
+    </p>
   );
 };
 
