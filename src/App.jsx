@@ -1,9 +1,11 @@
-function App() {
+import Header from './components/Header';
+
+const App = () => {
   return (
     <>
-      <h1>Github Finder</h1>
+      <Header />
     </>
   );
-}
+};
 
 export default App;
