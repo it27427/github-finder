@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Error from './components/Error';
+
+import HomePage from '@/pages/HomePage';
+import AboutPage from '@/pages/AboutPage';
+import NotFoundPage from '@/pages/NotFoundPage';
 
 const App = () => {
   return (
@@ -11,7 +14,11 @@ const App = () => {
 
         <main className='px-3 pb-12'>
           <div className='container mx-auto'>
-            <h1>Content</h1>
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/about' element={<AboutPage />} />
+              <Route path='/*' element={<NotFoundPage />} />
+            </Routes>
           </div>
         </main>
 
