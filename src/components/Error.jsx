@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import NotFound from '@/assets/images/not-found.svg';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 
 const Error = () => {
   return (
@@ -15,7 +15,7 @@ const Error = () => {
       </figure>
 
       <Link to='/' className='btn btn-neutral'>
-        <FaArrowLeft />
+        <FaHome />
         Back to Home
       </Link>
     </div>

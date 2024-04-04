@@ -6,6 +6,12 @@ import HomePage from '@/pages/HomePage';
 import AboutPage from '@/pages/AboutPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 
+/*
+ * NOTE: Alert is only used on the '/' route moving to that route we can prevent
+ * Content shift when alert shows by hiding and unhiding the Alert rather than
+ * Conditionally rendering
+ */
+
 const App = () => {
   return (
     <Router>
