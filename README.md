@@ -13,6 +13,3 @@ npm install
 ```
 npm run dev
 ```
-
-### Live Link
-[See demo](https://cerulean-klepon-98a7c4.netlify.app/)
