@@ -7,6 +7,12 @@ const UserSearch = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (text === '') {
+      alert('Please enter something');
+    } else {
+      setText('');
+    }
   };
 
   return (
