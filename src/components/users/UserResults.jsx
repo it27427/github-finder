@@ -18,7 +18,7 @@ const UserResults = () => {
       }
     );
 
-    const data = response.json();
+    const data = await response.json();
     setUsers(data);
     setLoading(false);
   };
