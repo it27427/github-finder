@@ -1,7 +1,7 @@
 import { useEffect, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
-  FaCodepen,
+  FaCode,
   FaStore,
   FaUserFriends,
   FaUsers,
@@ -88,6 +88,83 @@ const UserPage = () => {
                 </a>
               </div>
             </div>
+
+            <div className='w-full rounded-lg shadow-md bg-base-100 stats'>
+              {location && (
+                <div className='stat'>
+                  <h5 className='stat-title text-md'>Location</h5>
+                  <p className='stat-value text-lg text-slate-300 font-medium'>
+                    {location}
+                  </p>
+                </div>
+              )}
+
+              {blog && (
+                <div className='stat'>
+                  <h5 className='stat-title text-md'>Website</h5>
+                  <a
+                    href={`https://${blog}`}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='text-slate-300 font-medium'
+                  >
+                    {blog}
+                  </a>
+                </div>
+              )}
+
+              {twitter_username && (
+                <div className='stat'>
+                  <h5 className='stat-title text-md'>Twitter</h5>
+                  <a
+                    href={`https://twitter.com/${twitter_username}`}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='text-slate-300 font-medium'
+                  >
+                    {twitter_username}
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <div className='w-full py-5 mb-6 rounded-lg shadow-sm bg-base-100 stats'>
+          <div className='stat'>
+            <div className='stat-figure text-secondary'>
+              <FaUsers className='text-3xl md:text-5xl' />
+            </div>
+            <h5 className='stat-title pr-5'>Followers</h5>
+            <p className='stat-value pr-5 text-3xl md:text-4xl'>{followers}</p>
+          </div>
+
+          <div className='stat'>
+            <div className='stat-figure text-secondary'>
+              <FaUserFriends className='text-3xl md:text-5xl' />
+            </div>
+            <h5 className='stat-title pr-5'>Following</h5>
+            <p className='stat-value pr-5 text-3xl md:text-4xl'>{following}</p>
+          </div>
+
+          <div className='stat'>
+            <div className='stat-figure text-secondary'>
+              <FaCode className='text-3xl md:text-5xl' />
+            </div>
+            <h5 className='stat-title pr-5'>Public Repos</h5>
+            <p className='stat-value pr-5 text-3xl md:text-4xl'>
+              {public_repos}
+            </p>
+          </div>
+
+          <div className='stat'>
+            <div className='stat-figure text-secondary'>
+              <FaStore className='text-3xl md:text-5xl' />
+            </div>
+            <h5 className='stat-title pr-5'>Public Gists</h5>
+            <p className='stat-value pr-5 text-3xl md:text-4xl'>
+              {public_gists}
+            </p>
           </div>
         </div>
       </div>
