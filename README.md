@@ -1,6 +1,7 @@
 # Github Finder App
 
 App to search Github users and display their info.
+This project build by React-18 and Tailwind CSS.
 
 <img src="public/HomePage.png" />
 <img src="public/SearchResult.png" />
