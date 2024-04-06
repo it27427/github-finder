@@ -7,6 +7,7 @@ import AboutPage from '@/pages/AboutPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 
 import { GithubProvider } from '@/context/github/GithubContext';
+import { AlertProvider } from '@/context/alert/AlertContext';
 
 /*
  * NOTE: Alert is only used on the '/' route moving to that route we can prevent
@@ -17,23 +18,25 @@ import { GithubProvider } from '@/context/github/GithubContext';
 const App = () => {
   return (
     <GithubProvider>
-      <Router>
-        <div className='flex flex-col justify-between h-screen'>
-          <Header />
+      <AlertProvider>
+        <Router>
+          <div className='flex flex-col justify-between h-screen'>
+            <Header />
 
-          <main className='px-3 pb-12'>
-            <div className='container mx-auto'>
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                <Route path='/about' element={<AboutPage />} />
-                <Route path='/*' element={<NotFoundPage />} />
-              </Routes>
-            </div>
-          </main>
+            <main className='px-3 pb-12'>
+              <div className='container mx-auto'>
+                <Routes>
+                  <Route path='/' element={<HomePage />} />
+                  <Route path='/about' element={<AboutPage />} />
+                  <Route path='/*' element={<NotFoundPage />} />
+                </Routes>
+              </div>
+            </main>
 
-          <Footer />
-        </div>
-      </Router>
+            <Footer />
+          </div>
+        </Router>
+      </AlertProvider>
     </GithubProvider>
   );
 };
