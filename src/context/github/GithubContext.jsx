@@ -48,14 +48,15 @@ export const GithubProvider = ({ children }) => {
     });
 
     if (response.status === 404) {
+      window.location = '/notfound';
+    } else {
+      const data = await response.json();
+
+      dispatch({
+        type: 'GET_USER',
+        payload: data,
+      });
     }
-
-    const { items } = await response.json();
-
-    dispatch({
-      type: 'GET_USERS',
-      payload: items,
-    });
   };
 
   // CLEAR-USERS FROM STATE
@@ -72,6 +73,7 @@ export const GithubProvider = ({ children }) => {
         loading: state.loading,
         searchUsers,
         clearUsers,
+        getUser,
       }}
     >
       {children}
