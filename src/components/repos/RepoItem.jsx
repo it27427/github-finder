@@ -23,17 +23,17 @@ const RepoItem = ({ repo }) => {
         </h3>
         <p className='mb-3'>{description}</p>
 
-        <div>
-          <span class='inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10'>
+        <div className='flex items-center gap-4'>
+          <span className='inline-flex items-center rounded-md bg-purple-50 px-2 py-1 text-xs font-medium text-purple-700 ring-1 ring-inset ring-purple-700/10'>
             <FaEye className='mr-2' /> {watchers_count}
           </span>
-          <span class='inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-700/10'>
+          <span className='inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-700/10'>
             <FaStar className='mr-2' /> {stargazers_count}
           </span>
-          <span class='inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-700/10'>
+          <span className='inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-700/10'>
             <FaInfo className='mr-2' /> {open_issues}
           </span>
-          <span class='inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-700/10'>
+          <span className='inline-flex items-center rounded-md bg-yellow-50 px-2 py-1 text-xs font-medium text-yellow-700 ring-1 ring-inset ring-yellow-700/10'>
             <FaUtensils className='mr-2' /> {forks}
           </span>
         </div>
