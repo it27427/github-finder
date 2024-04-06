@@ -8,6 +8,8 @@ import {
   FaArrowLeft,
 } from 'react-icons/fa';
 import Spinner from '@/components/layouts/Spinner';
+import RepoList from '@/components/repos/RepoList';
+
 import GithubContext from '@/context/github/GithubContext';
 
 const UserPage = () => {
@@ -167,6 +169,8 @@ const UserPage = () => {
             </p>
           </div>
         </div>
+
+        <RepoList repos={public_repos} />
       </div>
     </>
   );
