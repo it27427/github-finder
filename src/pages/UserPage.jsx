@@ -13,11 +13,13 @@ import RepoList from '@/components/repos/RepoList';
 import GithubContext from '@/context/github/GithubContext';
 
 const UserPage = () => {
-  const { getUser, user, loading } = useContext(GithubContext);
+  const { getUser, user, loading, getUserRepos, repos, dispatch } =
+    useContext(GithubContext);
   const params = useParams();
 
   useEffect(() => {
     getUser(params.login);
+    getUserRepos(params.repos);
   }, []);
 
   const {
@@ -170,7 +172,7 @@ const UserPage = () => {
           </div>
         </div>
 
-        <RepoList repos={public_repos} />
+        {/* <RepoList repos={repos} /> */}
       </div>
     </>
   );
