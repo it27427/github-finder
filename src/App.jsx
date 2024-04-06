@@ -4,6 +4,7 @@ import Footer from '@/components/layouts/Footer';
 import Alert from '@/components/Alert';
 
 import HomePage from '@/pages/HomePage';
+import UserPage from '@/pages/UserPage';
 import AboutPage from '@/pages/AboutPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 
@@ -30,6 +31,7 @@ const App = () => {
 
                 <Routes>
                   <Route path='/' element={<HomePage />} />
+                  <Route path='/user/:login' element={<UserPage />} />
                   <Route path='/about' element={<AboutPage />} />
                   <Route path='/*' element={<NotFoundPage />} />
                 </Routes>
