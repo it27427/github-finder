@@ -26,6 +26,8 @@ const App = () => {
 
             <main className='px-3 pb-12'>
               <div className='container mx-auto'>
+                <Alert />
+
                 <Routes>
                   <Route path='/' element={<HomePage />} />
                   <Route path='/about' element={<AboutPage />} />
